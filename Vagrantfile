@@ -95,8 +95,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   	chef.add_recipe "apt"
 	chef.add_recipe "git"
 	chef.add_recipe "vim"
-	chef.add_recipe "python-setup"
-	
+	chef.add_recipe "python"
+	chef.add_recipe "nodejs"
+	chef.add_recipe "build-essential"
+	chef.add_recipe "java"
   end
 
   # Enable provisioning with chef server, specifying the chef server URL,

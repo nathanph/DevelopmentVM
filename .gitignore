@@ -1,2 +1,10 @@
+/src/__pycache__/
 /cookbooks/
+/outputs/*
+!/outputs/.gitignore
 /tmp/librarian/
+/.vagrant
+/.chef
+/.idea
+tmp1
+tmp2

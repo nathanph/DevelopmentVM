@@ -3,8 +3,13 @@
 /outputs/*
 !/outputs/.gitignore
 /tmp/librarian/
-/.vagrant
-/.chef
+/.vagrant/*
+/.chef/*
+/.vagrant/
+/.chef/
 /.idea
-tmp1
-tmp2
+tmp*
+/Tomasulo/nbproject/private/
+/projects/*
+/.DS_Store
+

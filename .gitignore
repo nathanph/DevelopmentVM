@@ -11,5 +11,6 @@
 tmp*
 /Tomasulo/nbproject/private/
 /projects/*
+!/projects/.gitignore
 /.DS_Store
 

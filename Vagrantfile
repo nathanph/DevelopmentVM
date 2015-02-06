@@ -99,6 +99,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	chef.add_recipe "nodejs"
 	chef.add_recipe "build-essential"
 	chef.add_recipe "java"
+	chef.add_recipe "vim_config"
+	
+	chef.json = {
+		"vim_config" => {
+			"plugin_manager" => "vundle",
+			"config_file_mode" => "remote_file",
+			"remote_config_url" => "https://raw.githubusercontent.com/nathanph/dotfiles/chef/.vimrc"
+		}
+	}
   end
 
   # Enable provisioning with chef server, specifying the chef server URL,

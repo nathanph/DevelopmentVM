@@ -101,6 +101,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	chef.add_recipe "build-essential"
 	chef.add_recipe "java"
 	chef.add_recipe "vim_config"
+  chef.add_recipe "git_user"
 
   chef.json = {
     "vim_config" => {
@@ -108,6 +109,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       "plugin_manager" => "vundle",
       "config_file_mode" => "remote_file",
       "remote_config_url" => "https://raw.githubusercontent.com/nathanph/dotfiles/chef/.vimrc"
+    },
+    "git_user" => {
+      "login"     =>  "nathanph",
+      "full_name" =>  "Nathan Hernandez",
+      "email"     =>  "email@nathanph.com"
     }
   }
   end

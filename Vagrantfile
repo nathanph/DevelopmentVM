@@ -91,6 +91,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	chef.cookbooks_path = ["site-cookbooks", "cookbooks"]
     chef.roles_path = "roles"
     chef.data_bags_path = "data_bags"
+  chef.node_name = "node_name"
 
   	chef.add_recipe "apt"
 	chef.add_recipe "git"
@@ -100,14 +101,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	chef.add_recipe "build-essential"
 	chef.add_recipe "java"
 	chef.add_recipe "vim_config"
-	
-	chef.json = {
-		"vim_config" => {
-			"plugin_manager" => "vundle",
-			"config_file_mode" => "remote_file",
-			"remote_config_url" => "https://raw.githubusercontent.com/nathanph/dotfiles/chef/.vimrc"
-		}
-	}
+
+  chef.json = {
+    "vim_config" => {
+      "name" => "vim_config",
+      "plugin_manager" => "vundle",
+      "config_file_mode" => "remote_file",
+      "remote_config_url" => "https://raw.githubusercontent.com/nathanph/dotfiles/chef/.vimrc"
+    }
+  }
   end
 
   # Enable provisioning with chef server, specifying the chef server URL,

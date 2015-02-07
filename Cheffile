@@ -10,4 +10,5 @@ cookbook "python"
 cookbook "nodejs"
 cookbook "build-essential"
 cookbook "java"
-cookbook "vim_config"
+cookbook "vim_config",
+  :git => "https://github.com/nathanph/cookbook-vim_config"

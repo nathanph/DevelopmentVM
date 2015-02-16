@@ -3,8 +3,10 @@ DevelopmentVM
 
 A virtual machine for general development.
 
+* Username: vagrant
+* Password: vagrant
 
-##Installation
+## Installation
 Make sure you have the vagrant librarian chef plugin before running ```vagrant up```.
 
 ```

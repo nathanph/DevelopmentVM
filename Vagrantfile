@@ -129,13 +129,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 				end
 			end
 			
-			execute "install vundle plugins" do
-				user		"vagrant"
-				environment	({'HOME' => '/home/vagrant'})
-				command		"vim +PluginInstall +qall"
-				action		"run"
-			end
-			
 			execute "set git user.name" do
 				user		"vagrant"
 				environment	({'HOME' => '/home/vagrant'})
@@ -150,6 +143,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 				action		"run"
 			end
 			
+			execute "install vundle plugins" do
+				user		"vagrant"
+				environment	({'HOME' => '/home/vagrant'})
+				command		"yes | vim +PluginInstall +qall"
+				action		"run"
+			end
 		RECIPE
 		
 	end

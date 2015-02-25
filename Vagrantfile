@@ -105,10 +105,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 		chef.json = {
 			"vim_config" => {
-				"name" => "vim_config",
+        "owner" => "vagrant",
+        "owner_group" => "vagrant",
+        "bundle_dir" => "/home/vagrant/.vim/bundle",
 				"plugin_manager" => "vundle",
 				"config_file_mode" => "remote_file",
-				"remote_config_url" => "https://raw.githubusercontent.com/nathanph/dotfiles/chef/.vimrc"
+        "config_file_path" => "/home/vagrant/.vimrc",
+				"remote_config_url" => "https://raw.githubusercontent.com/nathanph/dotfiles/master/.vimrc"
 			}
 		}
 

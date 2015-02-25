@@ -116,9 +116,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 		}
 
 	end
-	
+
 	config.vm.provision "chef_apply" do |chef|
-		
+
 		chef.recipe = <<-RECIPE
 			directories = [ "/home/vagrant/.vim/.undo",
 							"/home/vagrant/.vim/.backup",
@@ -131,21 +131,28 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 					action	"create"
 				end
 			end
-			
+
 			execute "set git user.name" do
 				user		"vagrant"
 				environment	({'HOME' => '/home/vagrant'})
 				command		"git config --global user.name 'Nathan Hernandez'"
 				action		"run"
 			end
-			
+
 			execute "set git user.email" do
 				user		"vagrant"
 				environment	({'HOME' => '/home/vagrant'})
-				command		"git config --global user.email 'email@nathanph.com'"				
+				command		"git config --global user.email 'email@nathanph.com'"
 				action		"run"
 			end
-			
+
+            execute "set git matching simple" do
+                user        "vagrant"
+                environment ({'HOME' => '/home/vagrant'})
+                command     "git config --global push.default simple"
+                action      "run"
+            end
+
 			execute "install vundle plugins" do
 				user		"vagrant"
 				environment	({'HOME' => '/home/vagrant'})
@@ -153,9 +160,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 				action		"run"
 			end
 		RECIPE
-		
+
 	end
-	
+
 	# Enable provisioning with chef server, specifying the chef server URL,
 	# and the path to the validation key (relative to this Vagrantfile).
 	#

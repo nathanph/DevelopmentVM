@@ -3,17 +3,17 @@ SITE
   specs:
     7-zip (1.0.2)
       windows (>= 1.2.2)
-    apt (2.6.0)
+    apt (2.6.1)
     ark (0.9.0)
       7-zip (>= 0.0.0)
       windows (>= 0.0.0)
     build-essential (2.1.3)
     chef_handler (1.1.6)
     dmg (2.2.2)
-    git (4.0.2)
+    git (4.1.0)
       build-essential (>= 0.0.0)
       dmg (>= 0.0.0)
-      runit (>= 1.0.0)
+      runit (>= 1.0)
       windows (>= 0.0.0)
       yum (~> 3.0)
       yum-epel (>= 0.0.0)
@@ -21,7 +21,7 @@ SITE
       git (>= 0.0.0)
       ssh_known_hosts (>= 0.0.0)
       user (>= 0.0.0)
-    java (1.29.0)
+    java (1.31.0)
     mercurial (2.0.4)
       build-essential (>= 0.0.0)
       python (>= 0.0.0)
@@ -35,17 +35,17 @@ SITE
     python (1.4.6)
       build-essential (>= 0.0.0)
       yum-epel (>= 0.0.0)
-    runit (1.5.10)
+    runit (1.5.16)
       build-essential (>= 0.0.0)
       yum (~> 3.0)
       yum-epel (>= 0.0.0)
     ssh_known_hosts (2.0.0)
       partial_search (>= 0.0.0)
     vim (1.1.2)
-    windows (1.34.8)
+    windows (1.36.6)
       chef_handler (>= 0.0.0)
-    yum (3.5.1)
-    yum-epel (0.5.3)
+    yum (3.5.3)
+    yum-epel (0.6.0)
       yum (~> 3.0)
 
 GIT
@@ -58,7 +58,7 @@ GIT
 GIT
   remote: https://github.com/nathanph/cookbook-vim_config
   ref: master
-  sha: 0319f683bae0c550b7dd824cc71015d97bfdad0d
+  sha: 75566539ca213d9ceb57e66886b333e0e7bbb519
   specs:
     vim_config (2.0.0)
       git (>= 0.0.0)

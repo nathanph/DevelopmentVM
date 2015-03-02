@@ -12,6 +12,4 @@ cookbook "build-essential"
 cookbook "java"
 cookbook "vim_config",
   :git => "https://github.com/nathanph/cookbook-vim_config"
-cookbook "git_user"
-cookbook "user",
-  :git => "https://github.com/fnichol/chef-user"
+cookbook 'golang'

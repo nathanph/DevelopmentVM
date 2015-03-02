@@ -101,17 +101,20 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 		chef.add_recipe "build-essential"
 		chef.add_recipe "java"
 		chef.add_recipe "vim_config"
-		chef.add_recipe "git_user"
+		chef.add_recipe "golang"
 
 		chef.json = {
+			"go" => {
+				"version" => "1.4.2"
+			},
 			"vim_config" => {
-        "owner" => "vagrant",
-        "owner_group" => "vagrant",
-        "bundle_dir" => "/home/vagrant/.vim/bundle",
-				"plugin_manager" => "vundle",
-				"config_file_mode" => "remote_file",
-        "config_file_path" => "/home/vagrant/.vimrc",
-				"remote_config_url" => "https://raw.githubusercontent.com/nathanph/dotfiles/master/.vimrc"
+				"owner" => "vagrant",
+				"owner_group" => "vagrant",
+				"bundle_dir" => "/home/vagrant/.vim/bundle",
+						"plugin_manager" => "vundle",
+						"config_file_mode" => "remote_file",
+				"config_file_path" => "/home/vagrant/.vimrc",
+						"remote_config_url" => "https://raw.githubusercontent.com/nathanph/dotfiles/master/.vimrc"
 			}
 		}
 

@@ -129,9 +129,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	config.vm.provision "chef_apply" do |chef|
 
 		chef.recipe = <<-RECIPE
-			directories = [ "/home/vagrant/.vim/.undo",
-							"/home/vagrant/.vim/.backup",
-							"/home/vagrant/.vim/.swp" ]
+			directories = [ "/home/vagrant/.vim",
+                            "/home/vagrant/.vim/undo",
+							"/home/vagrant/.vim/backup",
+							"/home/vagrant/.vim/swp" ]
 			directories.each do |path|
 				directory path do
 					owner	"vagrant"

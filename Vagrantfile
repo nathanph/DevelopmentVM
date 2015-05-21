@@ -11,10 +11,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 	# Every Vagrant virtual environment requires a box to build off of.
 	config.vm.box = "ubuntu/trusty64"
-	
+
 	# Set the machine's hostname.
 	config.vm.hostname = "development-vm"
-	
+
 	# Disable automatic box update checking. If you disable this, then
 	# boxes will only be checked for updates when the user runs
 	# `vagrant box outdated`. This is not recommended.
@@ -108,6 +108,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 		chef.add_recipe "java"
 		chef.add_recipe "vim_config"
 		chef.add_recipe "golang"
+        chef.add_recipe "apache2"
+        chef.add_recipe "docker"
 
 		chef.json = {
 			"go" => {

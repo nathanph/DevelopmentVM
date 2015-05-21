@@ -13,3 +13,5 @@ cookbook "java"
 cookbook "vim_config",
   :git => "https://github.com/nathanph/cookbook-vim_config"
 cookbook 'golang'
+cookbook 'apache2'
+cookbook 'docker'
